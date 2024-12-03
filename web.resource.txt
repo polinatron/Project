@@ -1,0 +1,17 @@
+*** Settings ***
+Documentation    Общие кейворды для всех тестов
+Library    SeleniumLibrary
+
+
+*** Keywords ***
+Precondition: Open Browzer And Maximize
+    [Documentation]    Предусловие: Открыть браузер на весь экран
+    [Arguments]    ${sire_url}    ${browser}
+
+    Open Browser    url=${sire_url}   browser=${browser}
+    Maximize Browser Window
+
+Postcondition: Close Browzer
+    [Documentation]    Постусловие: Закрыть браузер
+
+    Close Browser

@@ -1,0 +1,8 @@
+*** Settings ***
+Documentation    Кейворды для тестов на сайте okko.tv
+
+
+*** Variables ***
+${TO_CATALOG_BTN}          (//a[@class="vnd8j1gH"])[1]
+${TO_FILM_BTN}             (//img[@class="gi8dEl9y KyTqadoF"])[1]
+${TO_RECOMENDATION_BTN}    //*[text()="Рекомендации"]

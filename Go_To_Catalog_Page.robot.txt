@@ -1,0 +1,13 @@
+*** Settings ***
+Documentation    Общий тест
+Resource        okko.resource
+Test Setup      web.Precondition: Open Browzer And Maximize    sire_url=https://okko.tv/    browser=chrome
+Test Teardown   web.Postcondition: Close Browzer
+
+
+*** Test Cases ***
+Go To Site Page
+    [Documentation]    Перейти на главную страницу сайта
+
+    okko.Go To Catalog Page
+    okko.Go To Film Page

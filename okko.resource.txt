@@ -1,0 +1,20 @@
+*** Settings ***
+Documentation    Кейворды для сайта okko.tv
+Resource         ../web.resource
+Resource         ../locators/okko_lc.resource
+
+
+*** Keywords ***
+Go To Catalog Page
+    [Documentation]    Перейти в каталог страницы
+
+    Wait Until Element Is Visible    locator=${TO_CATALOG_BTN}    timeout=10s
+    Click Element    locator=${TO_CATALOG_BTN}
+
+Go To Film Page
+    [Documentation]    Перейти в раздел фильмы
+
+    Wait Until Element Is Visible    locator=${TO_FILM_BTN}   timeout=10s
+    Click Element    locator=${TO_FILM_BTN}
+
+    Wait Until Element Is Visible    ${TO_RECOMENDATION_BTN}    timeout=20s
